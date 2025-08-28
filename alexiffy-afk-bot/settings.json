@@ -1,0 +1,54 @@
+{
+  "bot-account": {
+    "username": "BotsitoAFK",
+    "password": "",
+    "type": "mojang"
+  },
+
+  "server": {
+    "ip": "QuienEsAlexiffy.aternos.me",
+    "port": 48169,
+    "version": "1.12.1"
+  },
+
+  "position": {
+    "enabled": false,
+    "x": 0,
+    "y": 0,
+    "z": 0
+  },
+
+  "utils": {
+    "auto-auth": {
+      "enabled": false,
+      "password": ""
+    },
+
+    "anti-afk": {
+      "enabled": true,
+      "sneak": true,
+      "random-move": true,
+      "swing-arms": true,
+      "jump": true,
+      "move-delay": 10
+    },
+
+    "chat-messages": {
+      "enabled": true,
+      "repeat": true,
+      "repeat-delay": 5,
+      "messages": [
+        "alexiffy es mi creador",
+        "algunos de los dialogos fueron hechos por el autocorrector de replit",
+        "la marlen color carton mojado rechazo al angelo XDDDDDDDDD",
+        "hola soy alexiffy, jueguen mis juegos de roblox",
+        "pinche angelo siempre se muere ahogado ajajjaj",
+        "puta madre ya es como la decima vez que me banean por afkbot"
+      ]
+    },
+
+    "chat-log": true,
+    "auto-reconnect": true,
+    "auto-reconnect-delay": 5000
+  }
+}
