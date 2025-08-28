@@ -10,6 +10,11 @@ app.get("/", (req, res) => {
   res.send("MC AFK Bot corriendo en Render 🚀");
 });
 
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Algo salió mal!");
+});
+
 app.listen(port, () => {
   console.log(`Servidor web escuchando en http://localhost:${port}`);
 });
@@ -31,4 +36,23 @@ bot.on("end", () => {
   setTimeout(() => {
     process.exit(1); // Render lo reinicia
   }, 5000);
+});
+
+bot.on("error", (err) => {
+  console.error(`Error del bot: ${err}`);
+});
+
+bot.on("respawn", () => {
+  console.log("Bot reconectado.");
+});
+
+// Manejo de errores adicionales
+process.on("uncaughtException", (err) => {
+  console.error("Error no capturado:", err);
+  process.exit(1);
+});
+
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("Rechazo no manejado:", promise, "razón:", reason);
+  process.exit(1);
 });
